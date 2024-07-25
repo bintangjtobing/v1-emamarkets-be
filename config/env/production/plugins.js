@@ -37,7 +37,11 @@ module.exports = ({ env }) => ({
         api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
-        upload: {},
+        upload: {
+          folder: "upload_from_be_strapi",
+          use_filename: true,
+          unique_filename: false,
+        },
         delete: {},
       },
     },
