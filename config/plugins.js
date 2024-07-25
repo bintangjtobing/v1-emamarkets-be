@@ -1,7 +1,13 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
   email: {
+    logger: {
+      debug: console.log,
+      info: console.info,
+      warn: console.warn,
+      error: console.error,
+    },
     config: {
-      provider: "nodemailer", // Use Nodemailer as the email provider
+      provider: "nodemailer",
       providerOptions: {
         host: env("SMTP_HOST", "smtp.example.com"),
         port: env("SMTP_PORT", 587),
@@ -11,16 +17,9 @@ module.exports = ({ env }) => ({
         },
       },
       settings: {
-        defaultFrom: env("SMTP_FROM", "hello@example.com"), // Default from address
-        defaultReplyTo: env("SMTP_REPLYTO", "hello@example.com"), // Default reply-to address
-        testAddress: env("SMTP_TEST_ADDRESS", "test@example.com"), // Test address (optional)
+        defaultFrom: env("SMTP_FROM", "hello@example.com"),
+        defaultReplyTo: env("SMTP_REPLYTO", "hello@example.com"),
       },
-    },
-    logger: {
-      debug: console.log,
-      info: console.info,
-      warn: console.warn,
-      error: console.error,
     },
   },
 });
