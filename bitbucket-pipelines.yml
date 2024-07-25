@@ -1,0 +1,28 @@
+image: node:20.15.1
+
+pipelines:
+  default:
+    - step:
+        name: Install Dependencies
+        caches:
+          - node
+        script:
+          - npm install
+          - npm run build
+        artifacts:
+          - build/**
+
+    - step:
+        name: Test
+        script:
+          - npm run dev
+
+    - step:
+        name: Deploy to production
+        deployment: production
+        script:
+          - pipe: atlassian/heroku-deploy:1.2.4
+            variables:
+              HEROKU_API_KEY: $HEROKU_API_KEY
+              HEROKU_APP_NAME: $HEROKU_APP_NAME
+              ZIP_FILE: strapi-emamarkets-be.zip
