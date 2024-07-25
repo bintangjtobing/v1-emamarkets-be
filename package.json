@@ -1,8 +1,8 @@
 {
   "name": "v-1-emamarkets-be-test",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "0.0.1",
+  "description": "EmaMarkets Strapi BEapplication",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -25,14 +25,14 @@
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "EmaMarkets Strapi BEdeveloper"
   },
   "strapi": {
     "uuid": "51ff476e-1857-410e-bfb0-ea87716811a5"
   },
   "engines": {
-    "node": "<=20.x.x",
-    "npm": ">=6.0.0"
+    "node": "20.15.1",
+    "npm": "10.7.0"
   },
   "license": "MIT"
 }
