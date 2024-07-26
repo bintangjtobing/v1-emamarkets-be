@@ -3,7 +3,7 @@ module.exports = ({ env }) => ({
     privateAttributes: ["_v", "id", "created_at"],
   },
   rest: {
-    prefix: "/v1",
+    prefix: "/api",
     defaultLimit: 100,
     maxLimit: 250,
   },
