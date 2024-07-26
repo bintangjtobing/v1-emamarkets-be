@@ -15,7 +15,6 @@ module.exports = ({ env }) => ({
       settings: {
         defaultFrom: env("SMTP_FROM", "hello@example.com"), // Default from address
         defaultReplyTo: env("SMTP_REPLYTO", "hello@example.com"), // Default reply-to address
-        testAddress: env("SMTP_TEST_ADDRESS", "test@example.com"), // Test address (optional)
       },
     },
     logger: {
