@@ -5,6 +5,6 @@ module.exports = ({ env }) => ({
   rest: {
     prefix: "/api",
     defaultLimit: 100,
-    maxLimit: 250,
+    maxLimit: 300,
   },
 });
